@@ -1,0 +1,19 @@
+function processArray(arr) {
+  // Create a new array to store the modified values
+  const newArray = [];
+
+  // Loop through each element in the original array
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+
+    // Check if the element is even
+    if (element % 2 === 0) {
+      newArray.push(element * element); // Square even numbers
+    } else {
+      newArray.push(element * 3); // Triple odd numbers
+    }
+  }
+
+  // Return the new array with modified values
+  return newArray;
+}
