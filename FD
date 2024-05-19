@@ -72,3 +72,43 @@ try {
 } catch (error) {
   console.error("Error:", error.message);
 }
+
+
+//TASK 3
+
+function createUserProfiles(names, modifiedNames) {
+ 
+  Args:
+      names: An array of original names.
+      modifiedNames: An array of modified names (presumably from formatArrayStrings).
+
+  Returns:
+
+  if (names.length !== modifiedNames.length) {
+    throw new Error("Input arrays must have the same length");
+  }
+
+  const userProfiles = [];
+  let id = 1;  // Auto-incrementing ID
+
+  for (let i = 0; i < names.length; i++) {
+    const originalName = names[i];
+    const modifiedName = modifiedNames[i];
+    userProfiles.push({
+      id,
+      originalName,
+      modifiedName,
+    });
+    id++;
+  }
+
+  return userProfiles;
+}
+
+// Example usage (assuming names and modifiedNames are available)
+try {
+  const userProfiles = createUserProfiles(names, modifiedNames);
+  console.log("User profiles:", userProfiles);
+} catch (error) {
+  console.error("Error:", error.message);
+}
