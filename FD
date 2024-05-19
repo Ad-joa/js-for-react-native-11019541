@@ -1,6 +1,6 @@
 function processArray(arr) {
   // Create a new array to store the modified values
-  const newArray = [];
+  const newArray = [];.
 
   // Loop through each element in the original array
   for (let i = 0; i < arr.length; i++) {
