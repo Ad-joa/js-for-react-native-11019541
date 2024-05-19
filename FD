@@ -1,13 +1,11 @@
+//TASK 1
 function processArray(arr) {
-  """
-  This function takes an array of numbers and returns a new array where each even number is squared and each odd number is tripled.
 
   Args:
       arr: A list of numbers.
 
   Returns:
-      A new list with modified elements.
-  """
+
   const modifiedArray = [];
   for (const num of arr) {
     modifiedArray.push(num % 2 === 0 ? num * num : num * 3);
@@ -20,3 +18,57 @@ const originalArray = [1, 2, 3, 4, 5];
 const modifiedArray = processArray(originalArray);
 console.log("Original array:", originalArray);
 console.log("Modified array:", modifiedArray);
+
+
+//TASK 2
+function processArray(arr) {
+
+  Args:
+      arr: A list of numbers.
+
+  Returns:
+
+  const modifiedArray = [];
+  for (const num of arr) {
+    modifiedArray.push(num % 2 === 0 ? num * num : num * 3);
+  }
+  return modifiedArray;
+}
+
+function formatArrayStrings(stringArr, numberArr) {
+
+  Args:
+      stringArr: An array of strings.
+      numberArr: An array of numbers (presumably processed by processArray).
+
+  Returns:
+
+if (stringArr.length !== numberArr.length) {
+    throw new Error("Input arrays must have the same length");
+  }
+
+  const formattedStrings = [];
+  for (let i = 0; i < stringArr.length; i++) {
+    const str = stringArr[i];
+    const num = numberArr[i];
+    if (num % 2 === 0) {
+      formattedStrings.push(str.toUpperCase());
+    } else {
+      formattedStrings.push(str.toLowerCase());
+    }
+  }
+  return formattedStrings;
+}
+
+// Example usage
+const originalArray = [1, 2, 3, 4, 5];
+const modifiedArray = processArray(originalArray);
+const stringArray = ["hello", "world", "how", "are", "you"];
+
+try {
+  const formattedArray = formatArrayStrings(stringArray, modifiedArray);
+  console.log("Original strings:", stringArray);
+  console.log("Formatted strings:", formattedArray);
+} catch (error) {
+  console.error("Error:", error.message);
+}
